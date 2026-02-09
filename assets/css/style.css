@@ -1,0 +1,320 @@
+/* assets/css/style.css */
+
+/* =========================================
+   1. VARIABLES & OVERRIDES
+   ========================================= */
+:root {
+    --bs-primary: #1D4ED8;
+    /* Corporate Blue */
+    --bs-primary-rgb: 29, 78, 216;
+    --bs-body-font-family: 'Inter', sans-serif;
+    --bs-body-color: #0F172A;
+    /* Deep Navy */
+    --font-heading: 'Playfair Display', serif;
+    --bs-body-bg: #FFFFFF;
+
+    --color-primary-dark: #000000;
+    /* Black for text as per image */
+    --color-text-light: #475569;
+    --color-accent-blue: #2563EB;
+    /* The blue in "Write" and "Story" */
+}
+
+/* Typography Defaults */
+body {
+    background-color: #F8FAFC;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from Swiper or animations */
+    width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-primary-dark);
+}
+
+.text-primary {
+    color: var(--color-accent-blue) !important;
+}
+
+/* =========================================
+   2. NAVBAR
+   ========================================= */
+.site-header {
+    background-color: transparent;
+    transition: all 0.3s ease;
+    z-index: 1030;
+    width: 100%;
+    /* Ensure header does not overflow */
+}
+
+/* ... (omitting irrelevant parts) */
+
+/* =========================================
+   3. HERO SECTION (High Fidelity)
+   ========================================= */
+.hero-section {
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 250px;
+    /* Textured background hint */
+    background: url('../images/background.png') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    /* Fix: Prevent Swiper from overflowing the section */
+    width: 100%;
+}
+
+/* Hero Overlay for Text Contrast */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    /* 85% opacity white overlay */
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure content sits above overlay (z-index 1 is already on container in index.php) */
+
+/* Smoothen Swiper for Marquee */
+.book-strip-swiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.book-cover-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Typo Scale */
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 400;
+    /* Regular weight for serif */
+    line-height: 1.1;
+    color: #000000;
+    letter-spacing: -1.5px;
+}
+
+.hero-title .italic-blue {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #3B82F6;
+    /* Lighter blue like screenshot */
+    font-weight: 400;
+}
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    /* Subhead is Sans per image analysis */
+    font-size: 2.75rem;
+    font-weight: 400;
+    /* Regular */
+    color: #000000;
+    letter-spacing: -1px;
+    margin-top: 0.5rem;
+}
+
+.hero-subtitle .blue-bold {
+    color: #1E40AF;
+    /* Darker blue for "Story Deserves" */
+    font-weight: 700;
+}
+
+.hero-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    color: #64748B;
+    max-width: 700px;
+    margin: 2rem auto 3rem auto;
+    font-weight: 400;
+}
+
+/* TRUST BADGES - Colorful */
+.trust-badges {
+    opacity: 1;
+    /* Reset opacity */
+}
+
+.trust-badges img {
+    filter: none;
+    /* No grayscale */
+    opacity: 1;
+    height: 32px;
+    /* Fixed height for consistency */
+    width: auto;
+    transition: transform 0.2s;
+}
+
+.trust-badges img:hover {
+    transform: scale(1.05);
+}
+
+/* SEARCH BAR - GLOWING GRADIENT BORDER */
+.search-container {
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    height: 72px;
+    /* Taller */
+    background: #FFFFFF;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    /* Base Box Shadow */
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+/* The Fading Border Effect */
+.search-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 100px;
+    padding: 3px;
+    /* Border thickness */
+    /* Gradient: Solid Blue Left -> Transparent Right */
+    background: linear-gradient(90deg, #3B82F6 0%, #3B82F6 20%, rgba(59, 130, 246, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* The Blue outer glow shadow on the left */
+.search-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 40%;
+    border-radius: 100px;
+    background: inherit;
+    box-shadow: -10px 0 40px -5px rgba(59, 130, 246, 0.5);
+    /* Left side glow */
+    opacity: 1;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+.custom-search-input {
+    border: none;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    padding: 0 60px 0 60px;
+    /* Space for icons */
+    font-size: 1.1rem;
+    color: #1e293b;
+    border-radius: 100px;
+}
+
+.custom-search-input:focus {
+    box-shadow: none;
+    outline: none;
+    background: transparent;
+}
+
+/* Icons */
+.search-icon-left {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000000;
+    pointer-events: none;
+}
+
+.search-icon-nav {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748B;
+    transition: transform 0.2s;
+}
+
+.search-icon-nav:hover {
+    transform: translateY(-50%) translateX(4px);
+    color: var(--bs-primary);
+}
+
+
+/* SUGGESTION PILLS */
+.suggestion-pill {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    color: #1E293B;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    /* Slight shadow */
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.suggestion-pill:hover {
+    border-color: #CBD5E1;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* BOOK STRIP */
+.book-strip-wrapper {
+    margin-top: 4rem;
+    width: 100%;
+    overflow: hidden;
+    /* Critical for Swiper */
+    position: relative;
+}
+
+.book-cover-card {
+    border-radius: 2px;
+    box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Re-add specific sections from previous steps if missing */
+.bg-dark-navy {
+    background-color: #0F172A;
+}
+
+.service-card {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Footer */
+.site-footer {
+    background: #fff;
+}
+
+@media (max-width: 991.98px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+}
+
+/* Fix: Footer Logo Size */
+.footer-logo img {
+    max-height: 50px;
+    width: auto;
+}
