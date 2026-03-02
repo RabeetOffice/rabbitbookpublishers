@@ -1,0 +1,199 @@
+@media(max-width:1600px){
+   .book_in_hand {width: 120%; }
+   .bannerEleWrap {right: 0; top: 120px; z-index: 999999999; width: 540px; height: 560px; }
+   .heading59px {font-size: 49px; } 
+   .port_top_shade {top: -250px; }
+   section.section_3 {height: 750px; }
+   .rnd_img {width: 670px !important;}
+}
+@media(max-width:1475px){
+    .heading59px {font-size: 39px; }
+    .heading50px {font-size: 40px; }
+    .heading30px {font-size: 25px; }
+    .heading24px {font-size: 19px;}
+    header .top_nav ul.navigation li a {padding: 4px 11px; border-radius: 7px; }
+    body {font-size: 15px;}
+    span.animated_span {height: 27px;}
+    .numberBtn .phone_icom_wrap {width: 27px; height: 27px; font-size: 18px; }
+    .book_in_hand {width: 111%; }
+    .book2 {width: 140px; }
+    .book1 {width: 120px; }
+    .bannerEleWrap {width: 410px; height: 410px; }
+    section.homeBanner {padding: 11% 0 0 0; }
+    .clients_section .clients_logo {margin: auto; display: table; }
+    .clients_img {width: 200px; }
+    section.transform {padding: 10% 140px 0 0; }
+    .post_slider {height: 650px; }
+    .heading170px {font-size: 140px; }
+    section.servicesBanner {padding: 11% 0 11% 0; }
+    section.section_2 {    min-height: 700px; min-height: 700px;
+}
+@media(max-width:1366px){
+    .port_top_shade {top: -238px; }
+    section.servicesBanner {padding: 12% 0 12% 0px !important; }
+    section.section_3 {height: 650px; }
+}
+@media(max-width: 1280px) {
+    .heading50px {font-size: 35px; }
+    section.how_it_works {margin-bottom: -73px; }
+    .heading40px {font-size: 35px; }
+    body.portfolio-page .banner_animation_wrap {height: 550px; width: 550px; top: -65px; }
+    .contact_sec .animated_circle_btn {bottom: 40px; }
+    footer {background-position: -5px top; }
+    header .top_nav ul.navigation li a {font-size: 13px; }
+    span.animated_span {height: 24px; }
+}
+@media(max-width: 1200px) {
+   footer {background-position: -17px top; }
+}
+@media screen and (max-width: 1199px) {
+ 
+    section.section_3 {height: 550px; }
+    header .top_nav ul.navigation {padding: 5px 5px; }
+    footer {background-position: -17px top; }
+    .numberBtn .phone_icom_wrap {width: 22px; height: 22px; font-size: 15px; }
+    section.section_2 {padding-bottom: 8%; }
+    section.section_4 {margin-bottom: 50px; }
+    .fourth_sec_img {position: relative; top: 50px; }
+    section.tabs_sec div#pills-tabContent {padding: 20px; }
+    ul#pills-tab li {margin: 0 0px; }
+    section.tabs_sec div#pills-tabContent img {height: 230px; object-fit: cover; }
+}
+@media screen and (max-width: 991px) {
+    .left_container {
+    overflow: hidden;
+    padding: 0 30px;
+    
+} 
+.margin-checkbox-via{
+font-size: 11px;
+
+}
+
+    .righ_top_img:before{display: none;}
+    .port_tabs_wrap ul#pills-tab {background-color: transparent; border: none; }
+    ul#pills-tab li {margin: 0 0px; }
+    section.transform {padding: 10% 140px 0 8%; }
+    section.testimonials {padding: 5% 0 0; }
+    .copyright p, .copyright a {font-size: 12px; }
+    section.unveiling {padding: 12% 0 5%; }
+    .port_tabs_wrap ul#pills-tab {display: flex; gap: 10px; margin-bottom: 15px !important;}
+    @keyframes scroll-down {0% {transform: translateX(0); } 100% {transform: translateX(-50%); } }
+    @keyframes scroll-up {0% {transform: translateX(-50%); } 100% {transform: translateX(0%); } }
+    .topToBottom, .bottomToTop {flex-direction: row !important; }
+    .topToBottom .clients_logo, .bottomToTop .clients_logo {width: 260px !important; margin: 0 10px !important;  } 
+    .post_slider {height: auto; }
+    .heading170px {font-size: 100px; }
+    body.contact-page footer {background-color: #faeecf; background-image: url(../images/footer-bg.webp); }
+    body.contact-page footer .footer {padding-top: 70px; }
+    .contact_sec .animated_circle_btn {bottom: 100px; }
+    .contact_sec .the_world_txt {top: 47%; }
+    .contact_sec {border-radius: 40px 40px 0 0; }
+    .clients_section {border-radius: 40px 40px 0px 0px; margin-left: 0px; margin-right: 0px; padding-bottom: 0;}
+    section.servicesBanner {padding: 12% 0 17% 0px !important; }
+    .col-lg-6.d-none.d-lg-block.before_circle {display: none !important; }
+    section.section_2 {padding: 50px 5% 15% 5% !important; }
+    section.section_4 {margin-bottom: 0; padding: 50px 0 130px; }
+    section.section_6:before {width: 56% ; bottom: -72%; border-radius: 410px 410px 0 0; right: 0; }
+    html body section.transform {padding: 50px !important; }
+    section.packages {border-radius: 40px; padding-top: 50px; margin-top: 0 !important;}
+    section.section_2 {min-height: auto !important;}
+    .abl_wrap {width: 1470px; }
+    body.contact-page .clients_section {padding-bottom: 270px; }
+    section.how_it_works {margin-bottom: 0px; border-radius: 0; }
+    span.num_wrap {transform: translate(0px, 1px); }
+    .topToBottom, .bottomToTop {flex-direction: row !important; width: 4400px; }
+    .layout {flex-direction: column; }
+    aside.sidebar {position: unset !important; }
+    main {max-width: 100%; }
+    .blog_container {padding: 50px 0; }
+    section.blog_banner .heading55px {font-size: 35px; }
+}
+@media screen and (max-width: 767px) {
+    section.unveiling {padding: 15% 0 5%; }
+    ul#pills-tab {padding: 10px 10px; }
+    section.transform {padding: 15% 140px 0 8%; }
+    .port_tabs_wrap {border-radius: 40px 40px 0 0; }
+    section.faqs {border-radius: 40px 40px 0px 0px; }
+    body {font-size: 14px; } 
+    h1 {font-size: 36px; } 
+    h2 {font-size: 28px; } 
+    h3 {font-size: 22px; }
+    h4 {font-size: 18px; } 
+    h5 {font-size: 14px; } 
+    h6 {font-size: 14px; } 
+    p{font-size: 14px; color: #303030; } 
+    br{display: none; } 
+    img.logo {max-width: 183px !important;} .copyright {text-align: center; } 
+    .footer ul.f_links {column-count: 1; } 
+    .responsive_menu {width: 250px; } 
+    ul#pills-tab li button {width: 100%; padding: 6px 10px; font-size: 15px; transform: scale(1) !important; } 
+    ul#pills-tab li {/* width: 100%; */ margin: 0 0px; } 
+    .footer {padding: 40px 0 20px; } 
+    .copyright .btn_set {justify-content: center; }
+    .btn_set a:last-child{margin-bottom: 0; } 
+    .btn_set {display: inline-block; column-gap: 15px; align-items: center; } 
+    .inner_page_banner {padding: 50px 0 40px; } 
+    .abl_wrap {width: 1320px; } 
+    .checkbox_wrapper {height:auto; overflow: hidden; padding-top: 7px; gap: 10px !important; margin-top: 5px;}
+    .primeBtn {padding: 5px 15px; }
+    html body section.transform {padding: 30px !important; }
+    span.num_wrap br {display: block !important;}
+    .primeBtn span.txt_wrap br {display: block !important; }
+    section.highlight {padding-bottom: 20%; }
+    .unique_clm {padding-right: 0%; }
+    img.unique_img {display: none; }
+}
+@media screen and (max-width: 575px) {
+    section.homeBanner {padding: 20% 0 0 0; }
+    .heading59px {font-size: 30px; }
+    .publishing_form {width: 100% }
+    section.unveiling {margin: 50px 0 0 0; padding-top: 7%; border-radius: 50px;}
+    section.tabs_sec div#pills-tabContent {margin-top: 35px; } section.transform {padding: 24% 8% 20px 8%; }
+    section.testimonials .logo_wrap {height: 200px; }
+    .copyright {border-radius: 50px 50px 0px 0px; }
+    footer {border-radius: 50px 50px 0px 0px; }
+    section.highlight {padding: 11% 0; }
+    section.how_it_works {/* border-radius: 0px 0px 50px 50px; */}
+    .numberBtn .phone_icom_wrap {width: 52px; }
+    section.tabs_sec div#pills-tabContent {padding: 20px; border-radius: 50px; }
+    section.how_it_works {/* margin-bottom: -53px; */}
+    .port_tabs_wrap {border-radius: 50px 50px 0 0; margin: 50px 0 0 0; }
+    .topToBottom .clients_logo, .bottomToTop .clients_logo {width: 170px !important; height: 170px !important; }
+    .heading170px {font-size: 70px; }
+    .contact_sec .the_world_txt {font-size: 70px; }
+    section.servicesBanner {padding: 17% 0 30% 0px !important; }
+    section.section_2 {padding: 50px 40px 150px 40px !important; border-radius: 40px 40px 0px 0px; }
+    section.section_3 {height: 370px; border-radius: 40px 40px 0px 0px; }
+    section.section_6:before {bottom: -82%; right: -110px; }
+    section.servicesBanner {padding: 120px 0 150px 0px !important; }
+    section.section_6 {padding: 50px 0; }
+    section.section_6:before {bottom: -92%; right: -200px; }
+    section.faqs {padding: 50px 0 !important; }
+    section.testimonials {padding: 50px 0 0;}
+    ul#pills-tab {background-color: transparent; border: none; padding: 0 !important; }
+    .why_choose_us_clm {background-size: contain; }
+    .responsive_menu .numberBtn .phone_icom_wrap {width: 23px; }
+    section.testimonials .logo_wrap {height: 70px !important; padding: 34px !important; }
+    section.highlight {padding-bottom: 20%; }
+}
+@media screen and (max-width: 480px) {
+    section.tabs_sec div#pills-tabContent {padding: 0px !important; border-radius: 25px; }
+    .col_count2 {column-count: 1; } 
+    .heading70px {font-size: 45px;}
+    .swiper-container img {height: auto;width: 100%;}
+    section.testimonials .logo_wrap {height: 120px; padding: 20px; }
+    .heading50px {font-size: 25px; }
+    .heading24px {font-size: 16px; }
+    section.tabs_sec div#pills-tabContent {padding: 20px; }
+    .why_choose_us_clm {padding: 0px 0 0px 0px; }
+    .user_img {width: 60px !important; }
+    section.section_3 {height: 270px !important; background-position: right 32px; }
+    section.packages .pkg_clm {padding: 25px;}
+    section.transform .btn_set {gap: 10px !important; display: flex; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+    .owl-nav {position: unset; justify-content: flex-start; margin-top: 20px; }
+    .popupform-main-new-popup .primeBtn {height: 34px; overflow: hidden; }
+    section.testimonials .logo_wrap {padding: 20px !important; }
+    section.highlight {padding-bottom: 25%; }
+    section.blog_banner .heading55px {font-size: 27px; }
+}

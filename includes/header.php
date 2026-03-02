@@ -1,135 +1,340 @@
-<?php
-// /includes/header.php
-include_once __DIR__ . '/config.php';
-?>
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo WEBSITE_NAME; ?> - Professional Publishing Agency</title>
-    <link rel="icon" type="image/png" href="<?php echo WEBSITE_FAV; ?>">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="<?php echo isset($pageDescription) ? $pageDescription : 'Turn your manuscript into a masterpiece with expert writing, editing, printing, and marketing. Start your publishing journey with personalized support today!'; ?>">
+    <link rel="icon" type="image/png" href="assets/images/favicon.webp">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
         rel="stylesheet">
 
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style7839.css?v=1.2">
+    <link rel="stylesheet" type="text/css" href="assets/css/aos.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reponsive.css">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script>
+        setTimeout(function () {
+            const cssFiles = [
+                'assets/css/bootstrap.min.css',
+                'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+                'assets/css/jquery.fancybox.min.css',
+                'assets/css/slick.css',
+                'assets/css/slick-theme.css',
+                'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css',
+                'assets/css/swiper-bundle.min.css',
+                'assets/css/style.css',
+                'assets/css/reponsive.css'
+            ];
 
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+            cssFiles.forEach(function (href) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = href;
+                link.type = 'text/css';
+                link.media = 'all';
+                document.head.appendChild(link);
+            });
+        }, 1200); 
+    </script>
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <title><?php echo isset($pageTitle) ? $pageTitle : WEBSITE_NAME; ?></title>
+
 </head>
 
-<body class="bg-light">
+<body class="<?php echo isset($bodyClass) ? $bodyClass : ''; ?>">
 
-    <!-- Navbar -->
-    <!-- Headroom will manage the classes 'headroom', 'headroom--pinned', 'headroom--unpinned' -->
-    <header class="site-header fixed-top py-3">
-        <div class="container-fluid container-xl">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid d-flex justify-content-between align-items-center">
+    <header>
 
-                    <!-- 1. Logo (Left) -->
-                    <a class="navbar-brand d-flex align-items-center gap-2" href="index.php">
-                        <img src="<?php echo WEBSITE_LOGO; ?>" alt="<?php echo WEBSITE_NAME; ?>" class="logo-img"
-                            height="40">
-                        <div class="d-flex flex-column lh-1">
-                            <span class="brand-name fw-bold text-primary-dark"
-                                style="font-family: var(--font-heading); font-size: 1.25rem;">Publishing Platform</span>
-                            <span class="tagline text-muted text-uppercase"
-                                style="font-size: 0.65rem; letter-spacing: 1px;">Publishing Agency</span>
-                        </div>
+        <nav>
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-3 col-4" data-aos="fade-right" data-aos-delay="100">
+
+                    <a href="index.php">
+
+                        <img src="assets/images/logo.webp" class="logo img-fluid" width="" height="" alt="Logo">
+
                     </a>
 
-                    <!-- Mobile Toggle -->
-                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <!-- 2. Centered Nav Pills (Center) -->
-                    <div class="collapse navbar-collapse justify-content-center order-2 order-lg-1" id="navbarContent">
-                        <ul
-                            class="navbar-nav nav-pills custom-nav-pills bg-white shadow-sm rounded-pill px-3 py-1 gap-1">
-                            <li class="nav-item">
-                                <a class="nav-link active rounded-pill" aria-current="page" href="index.php">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link rounded-pill" href="#about">About Us</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle rounded-pill" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Writing
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Ghostwriting</a></li>
-                                    <li><a class="dropdown-item" href="#">Song Writing</a></li>
-                                    <li><a class="dropdown-item" href="#">Script Writing</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle rounded-pill" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Editing
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Book Editing</a></li>
-                                    <li><a class="dropdown-item" href="#">Proofreading</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle rounded-pill" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Book Publishing
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Publishing</a></li>
-                                    <li><a class="dropdown-item" href="#">Marketing</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle rounded-pill" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Case Studies
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Fiction</a></li>
-                                    <li><a class="dropdown-item" href="#">Non-Fiction</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle rounded-pill" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    More
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Contact</a></li>
-                                    <li><a class="dropdown-item" href="#">Blog</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- 3. Actions (Right) -->
-                    <div class="d-none d-lg-flex align-items-center gap-3 order-3">
-                        <a href="#" class="text-decoration-none text-dark fw-semibold">Login</a>
-                        <a href="#contact" class="btn btn-primary rounded-pill px-4 fw-medium">Let’s Get Started</a>
-                    </div>
                 </div>
-            </nav>
-        </div>
+
+                <div class="col-lg-9 col-8" data-aos="fade-left" data-aos-delay="100">
+
+                    <div class="hamBurger d-block d-lg-none">
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                    </div>
+
+                    <div class="top_nav d-none d-lg-block">
+
+                        <ul class="navigation d-none">
+
+                            <li data-aos="fade-down" data-aos-delay="500">
+
+                                <a href="javascript:;" class="d-flex gap-2 align-items-center service_btn">Services <i
+                                        class="fa fa-angle-down" aria-hidden="true"></i></a>
+
+                                <ul class="megaMenu">
+
+                                    <li>
+
+                                        <a href="javascript:;" class="d-flex gap-2 align-items-center subService">
+
+                                            <img src="assets/images/s1.webp" class="service_img" width="" height=""
+                                                alt="" />
+
+                                            <span>Publishing Services</span>
+
+                                        </a>
+
+                                        <div class="subMenuService">
+
+                                            <h5>Publishing Services</h5>
+
+                                            <a href="children-book-publishing.php">Children Book Publishing</a>
+
+                                            <a href="self-publishing.php">Self Publishing</a>
+
+                                            <a href="amazon-publishing.php">Amazon Publishing</a>
+
+                                            <a href="amazon-audiobook-publishing.php">Amazon Audiobook Publishing</a>
+
+                                            <a href="global-publishing.php">Global Publishing</a>
+
+                                            <a href="lulu-publishing.php">Lulu Publishing</a>
+
+                                            <a href="kindle-publishing.php">Kindle Publishing</a>
+
+                                            <a href="ebook-publishing.php">Ebook Publishing</a>
+
+                                            <a href="javascript:;" class="closeMenu"><span>+</span></a>
+
+                                        </div>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="javascript:;" class="d-flex gap-2 align-items-center subService">
+
+                                            <img src="assets/images/s2.webp" class="service_img" width="" height=""
+                                                alt="" />
+
+                                            <span>Book Writing</span>
+
+                                        </a>
+
+                                        <div class="subMenuService">
+
+                                            <h5>Book Writing</h5>
+
+                                            <a href="ebook-writing.php">Ebook Writing</a>
+
+                                            <a href="ghost-writing.php">Ghost Writing</a>
+                                            <a href="book-proofreading.php">Book Proofreading</a>
+
+                                            <a href="javascript:;" class="closeMenu"><span>+</span></a>
+
+                                        </div>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="book-editing.php" class="d-flex gap-2 align-items-center subService">
+
+                                            <img src="assets/images/s3.webp" class="service_img" width="" height=""
+                                                alt="" />
+
+                                            <span>Book Editing</span>
+
+                                        </a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="javascript:;" class="d-flex gap-2 align-items-center subService">
+
+                                            <img src="assets/images/s4.webp" class="service_img" width="" height=""
+                                                alt="" />
+
+                                            <span>Book Marketing</span>
+
+                                        </a>
+
+                                        <div class="subMenuService">
+
+                                            <h5>Book Marketing</h5>
+
+                                            <a href="amazon-book-marketing.php">Amazon Book Marketing</a>
+
+                                            <a href="amazon-advertising.php">Amazon Advertising</a>
+
+                                            <a href="amazon-storefront.php">Amazon Storefront</a>
+
+                                            <a href="javascript:;" class="closeMenu"><span>+</span></a>
+
+                                        </div>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="javascript:;" class="d-flex gap-2 align-items-center subService">
+
+                                            <img src="assets/images/s5.webp" class="service_img" width="" height=""
+                                                alt="" />
+
+                                            <span>Book Cover Design</span>
+
+                                        </a>
+
+                                        <div class="subMenuService">
+
+                                            <h5>Book Cover Design</h5>
+
+                                            <a href="book-formatting.php">Book Formatting</a>
+
+                                            <a href="book-cover-design.php">Book Cover Design</a>
+
+                                            <a href="book-illustration.php">Book Illustration</a>
+
+                                            <a href="javascript:;" class="closeMenu"><span>+</span></a>
+
+                                        </div>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="book-video-trailer.php"
+                                            class="d-flex gap-2 align-items-center subService">
+
+                                            <img src="assets/images/s6.webp" class="service_img" width="" height=""
+                                                alt="" />
+
+                                            <span>Video Trailer</span>
+
+                                        </a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="author-websites-development.php"
+                                            class="d-flex gap-2 align-items-center subService">
+
+                                            <img src="assets/images/s7.webp" class="service_img" width="" height=""
+                                                alt="" />
+
+                                            <span>Author Website</span>
+
+                                        </a>
+
+                                    </li>
+
+                                    <li>
+
+                                        <a href="javascript:;" class="d-flex gap-2 align-items-center subService">
+
+                                            <img src="assets/images/s8.webp" class="service_img" width="" height=""
+                                                alt="" />
+
+                                            <span>Audio Book</span>
+
+                                        </a>
+
+                                        <div class="subMenuService">
+
+                                            <h5>Audio Book</h5>
+
+                                            <a href="audible-publishing.php">Audible Publishing</a>
+
+                                            <a href="audio-book-narration.php">Audio Book Narration</a>
+
+                                            <a href="audio-book-publishing.php">Audio Book Publishing</a>
+
+                                            <a href="javascript:;" class="closeMenu"><span>+</span></a>
+
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+                            <li data-aos="fade-down" data-aos-delay="600"><a href="pricing-packages.php">Packages</a>
+                            </li>
+
+                            <li data-aos="fade-down" data-aos-delay="600"><a href="testimonials.php">Testimonials</a>
+                            </li>
+
+                            <li data-aos="fade-down" data-aos-delay="700"><a href="about-us.php">About</a></li>
+
+                            <li data-aos="fade-down" data-aos-delay="800"><a href="portfolio.php">Portfolio</a></li>
+
+                            <li data-aos="fade-down" data-aos-delay="900"><a href="contact-us.php">Contact us</a></li>
+
+                            <li data-aos="fade-down" data-aos-delay="1000">
+
+                                <a href="<?php echo PHONE_HREF; ?>" class="numberBtn">
+
+                                    <span class="phone_icom_wrap"><i class="fa fa-phone" aria-hidden="true"></i></span>
+
+                                    <span class="animated_span">
+
+                                        <span class="num_wrap">
+
+                                            Call Now<br>
+
+                                            <?php echo PHONE; ?>
+                                        </span>
+
+                                    </span>
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
     </header>
-    <main>
+
+    <div class="responsive_menu">
+        <img src="assets/images/logo.webp" class="logo" width="210px" height="" alt="logo" />
+        <div class="clm_wrap"></div>
+
+    </div>
