@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $pageTitle = 'Rabbit Book Publishers | Pricing & Packages | Rabbit Book Publishers – Affordable Publishing Services';
 $bodyClass = 'pricing-packages';
 $pageDescription = 'Explore Rabbit Book Publishers’ transparent pricing and flexible packages for writing, editing, publishing, and marketing services. Find the perfect plan to bring your book to life.';
@@ -8,7 +8,7 @@ include 'includes/header.php';
 <style>
     .port_tabs_wrap {
         background-image: none;
-        background-color: #fff3d3 !important;
+        background-color: #E8EFF5 !important;
     }
 
     .port_tabs_wrap ul#pills-tab li button {
@@ -16,8 +16,8 @@ include 'includes/header.php';
         font-weight: 200;
         border-radius: 6px;
         transform: translate(0px, 0px);
-        background-color: #133f36;
-        border: 2px solid #88b4f7;
+        background-color: #265783;
+        border: 2px solid #7DA1C5;
         margin-top: 10px;
         border-radius: 50px;
         width: 222px !important;
@@ -25,9 +25,9 @@ include 'includes/header.php';
 
     .port_tabs_wrap ul#pills-tab li button.active {
         box-shadow: none;
-        background-color: #88b4f7 !important;
+        background-color: #7DA1C5 !important;
         color: white !important;
-        border: 2px solid #133f36;
+        border: 2px solid #265783;
     }
 
     .port_tabs_wrap ul#pills-tab {
@@ -50,8 +50,8 @@ include 'includes/header.php';
             font-weight: 200;
             border-radius: 6px;
             transform: translate(0px, 0px);
-            background-color: #133f36;
-            border: 2px solid #88b4f7;
+            background-color: #265783;
+            border: 2px solid #7DA1C5;
             margin-top: 10px;
             width: 169px;
             height: 65px;

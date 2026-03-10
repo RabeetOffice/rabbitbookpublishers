@@ -567,10 +567,10 @@
         packageInfoDiv.style.display = "none";
         packageInfoDiv.innerHTML = `
         <div class="selected-package-info">
-            <h6 class="heading20px my-3 mb-md-4 text-center" style="color:#133f36;">
+            <h6 class="heading20px my-3 mb-md-4 text-center" style="color:#265783;">
                 Selected Package Details
             </h6>
-            <div style="background:#fff3d3;padding:20px;border-radius:15px;border:2px solid #88b4f7;">
+            <div style="background:#E8EFF5;padding:20px;border-radius:15px;border:2px solid #7DA1C5;">
                 <p><strong>Service:</strong> <span id="display-service-name"></span></p>
                 <p><strong>Package:</strong> <span id="display-pkg-name"></span></p>
                 <p><strong>Price:</strong> $<span id="display-pkg-price"></span></p>
